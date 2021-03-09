@@ -23,7 +23,7 @@ public class SelectionSort {
         selectionSort(array);
         System.out.println(Arrays.toString(array));*/
 
-        int[] array = new int[10000];
+        int[] array = new int[1000000];
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
@@ -32,14 +32,14 @@ public class SelectionSort {
         Collections.shuffle(Arrays.asList(array));
 
         // Print shuffled collection
-        System.out.println(Arrays.toString(array));
+        //System.out.println(Arrays.toString(array));
 
         long startTime = System.nanoTime();
         selectionSort(array);
         long endTime = System.nanoTime();
 
         // Print sorted collection
-        System.out.println(Arrays.toString(array));
+        //System.out.println(Arrays.toString(array));
 
         // Print runtime in seconds
         System.out.println("Selection Sort runtime: " + (endTime - startTime));

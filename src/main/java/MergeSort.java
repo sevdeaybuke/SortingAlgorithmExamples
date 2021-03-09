@@ -50,7 +50,7 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int[] array = new int[10000];
+        int[] array = new int[1000000];
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
@@ -58,24 +58,16 @@ public class MergeSort {
         // Shuffle array
         Collections.shuffle(Arrays.asList(array));
 
-        // Print shuffled collection
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
+
 
         long startTime = System.nanoTime();
         mergeSort(array, 0, array.length - 1);
         long endTime = System.nanoTime();
 
         // Print sorted collection
-        for (int i = 0; i < array.length; i++) {
-            System.out.println(array[i]);
-        }
 
-        System.out.println();
 
         // Print runtime in nanoseconds
         System.out.println("Merge Sort runtime: " + (endTime - startTime));
-        System.out.println(Arrays.toString(array));
     }
 }

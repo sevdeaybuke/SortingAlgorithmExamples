@@ -40,24 +40,24 @@ public class InsertionSort {
         list.forEach(e -> System.out.print(e.getId() + ", "));*/
 
         List<Element> list = new ArrayList<>();
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 1000000; i++) {
             list.add(new Element(i));
         }
 
         Collections.shuffle(list);
 
         // Print shuffled list
-        list.forEach(e -> System.out.print(e.getId() + ", "));
+        //list.forEach(e -> System.out.print(e.getId() + ", "));
 
         long startTime1 = System.nanoTime();
         insertionSortArrayList(list);
         long endTime1 = System.nanoTime();
 
-        System.out.println();
+        //System.out.println();
 
         // Print sorted collection
-        list.forEach(e -> System.out.print(e.getId() + ", "));
-        System.out.println();
+        //list.forEach(e -> System.out.print(e.getId() + ", "));
+        //System.out.println();
 
         // Print runtime in nanoseconds
         System.out.println("Insertion Sort runtime: " + (endTime1 - startTime1));
